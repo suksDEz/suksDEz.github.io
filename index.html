@@ -19,8 +19,16 @@
         .container {
             max-width: 600px;
             padding: 20px;
-            background-color: #fff;
+            background-color: #9f31de57;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .container2
+        {
+            max-width: 100px;
+            padding: 10px;
+            background-color: #000000;
+            box-shadow: 0 1px 3px rgba(12, 11, 11, 0.949);
             border-radius: 10px;
         }
         h1 {
@@ -32,7 +40,11 @@
             margin-bottom: 30px;
         }
         t {
-            font-size: 1em;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        v{
+            font-size: 0.8em;
             margin-bottom: 30px;
         }
         .button {
@@ -59,6 +71,7 @@
             font-size: 2rem;
             opacity: 0;
             pointer-events: none;
+            animation: heartAnimation 1.5s infinite;
         }
 
         @keyframes heartAnimation {
@@ -87,29 +100,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>Эта страница пока пуста</h1>
-        <p>Хочешь ли ты начать путь её заполнения?</p>
-        <p>Дай знать ему об этом...</p>
+        <h1>Перед тобой чистый и абсолютно белый холст, символизирующий новый этап</h1>
+
+        <p>Я предлагаю писать картину вместе. Где каждое значимое событие будет её частью...</p>
+
+        <p>
+            На этот сайт можно загрузить изображения, на которых запечатлены ярчайшие моменты. 
+            Таким образом, почему-бы не начать с "эскиза" сейчас?
+        </p>
+
+        <t>Ты готова?</t> 
+        <p><v>(Напиши и отправь "ДА", после того, как нажмёшь на кнопку ниже)</v></p>
+        <p> <div class="container">👇</div></p>
+
         <!-- Ссылка на Telegram -->
         <a href="https://t.me/MacdonGon7" class="button" target="_blank">
             Написать в Telegram
             <div class="hearts">💖</div>
         </a>
     </div>
-
-    <script>
-        const button = document.querySelector('.button');
-        const hearts = document.querySelector('.hearts');
-
-        button.addEventListener('mouseenter', () => {
-            hearts.style.opacity = '1';
-            hearts.style.animation = 'heartAnimation 1.5s infinite';
-        });
-
-        button.addEventListener('mouseleave', () => {
-            hearts.style.opacity = '0';
-            hearts.style.animation = 'none';
-        });
-    </script>
 </body>
 </html>
